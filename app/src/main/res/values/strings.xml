@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">MedicallyApp</string>
+    <string-array name="articles">
+        <item>Oakville</item>
+        <item>Burlington</item>
+        <item>Kingston</item>
+        <item>Vernon</item>
+        <item>Kelowna</item>
+        <item>Vancouver</item>
+        <item>Toronto</item>
+        <item>Calgary</item>
+        <item>Halifax</item>
+        <item>Edmonton</item>
+        <item>Montreal</item>
+        <item>Quebec</item>
+        <item>Brampton</item>
+        <item>Ottawa</item>
+        <item>Regina</item>
+        <item>Victoria</item>
+        <item>Winnipeg</item>
+    </string-array>
 </resources>
