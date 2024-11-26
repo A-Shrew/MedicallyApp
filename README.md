@@ -8,3 +8,6 @@ Vlad Tasks: (Finish By Thursday)
 Brett Tasks: 
 - Browse and read medical papers and journals (articles should be interactive and bring you to their webpage)
 - Create/Edit/Delete doctor reviews 
+
+Adallah Tasks:
+- Booking appointment
