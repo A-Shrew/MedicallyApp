@@ -11,3 +11,7 @@ Brett Tasks:
 
 Adallah Tasks:
 - Booking appointment
+
+Branching Strategy:
+- For each task create a new branch
+- On task completion Merge create a pull request to merge task branch to main branch
