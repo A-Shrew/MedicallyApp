@@ -37,6 +37,8 @@ public class appointment_booking_page1 extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
 
         int docnum = doctortype.getCheckedRadioButtonId();
+        RadioButton dochosen = (RadioButton) findViewById(docnum);
+        String doctype = dochosen.getText().toString();
         String symptom_description = desc.getText().toString();
 
 
@@ -52,7 +54,7 @@ public class appointment_booking_page1 extends AppCompatActivity {
 
         Intent intent = new Intent(this, activity_appointment_booking_page2.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("docnum",docnum);
+        bundle.putString("doctype",doctype);
         bundle.putString("symptom_description",symptom_description);
         intent.putExtras(bundle);
         startActivity(intent);

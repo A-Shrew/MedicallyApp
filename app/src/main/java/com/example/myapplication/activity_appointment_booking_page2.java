@@ -22,8 +22,7 @@ import java.lang.reflect.Array;
 public class activity_appointment_booking_page2 extends AppCompatActivity {
     Intent intent;
     Bundle bundle;
-    String symptom_description;
-    int docnum;
+    String symptom_description, doctype;
     Spinner doctype2, city;
     EditText date;
     TextView docprompt;
@@ -41,7 +40,7 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         intent = getIntent();
         bundle = intent.getExtras();
 
-        docnum = bundle.getInt("docnum");
+        doctype = bundle.getString("doctype");
         symptom_description = bundle.getString("symptom_description");
 
         doctype2 = (Spinner) findViewById(R.id.doctype2);
@@ -77,16 +76,21 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         city.setAdapter(cityarray);
 
-        switch(docnum) {
-            case 1: doctype2.setAdapter(adapter1);
+        switch(doctype) {
+            case "- Primary care providers":
+                    doctype2.setAdapter(adapter1);
                     docprompt.setText(prompt_template+"primary care specialist:"); break;
-            case 2: doctype2.setAdapter(adapter2);
+            case "- Specialists"
+                    : doctype2.setAdapter(adapter2);
                     docprompt.setText(prompt_template+" specialist specialist:"); break;
-            case 3: doctype2.setAdapter(adapter3);
+            case "- Women's and Reproductive Health":
+                    doctype2.setAdapter(adapter3);
                     docprompt.setText(prompt_template+"women's/reproductive specialist:"); break;
-            case 4: doctype2.setAdapter(adapter4);
+            case "- Mental health":
+                    doctype2.setAdapter(adapter4);
                     docprompt.setText(prompt_template+"mental health specialist:"); break;
-            case 5: doctype2.setAdapter(adapter5);
+            case "- Other Specialists":
+                    doctype2.setAdapter(adapter5);
                     docprompt.setText(prompt_template+"other doctor"); break;
         }
     }
