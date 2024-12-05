@@ -18,6 +18,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.lang.reflect.Array;
 
 public class activity_appointment_booking_page2 extends AppCompatActivity {
@@ -27,6 +32,7 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
     Spinner doctype2, city;
     EditText date;
     TextView docprompt;
+    DatabaseReference databaseReference, getUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +44,14 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        databaseReference = FirebaseDatabase.getInstance().getReference("Appointments");
+
         intent = getIntent();
         bundle = intent.getExtras();
 
         phone_num = bundle.getString("phone");
+        getUser = databaseReference.child(phone_num);
+
         doctype = bundle.getString("doctype");
         symptom_description = bundle.getString("symptom_description");
 
@@ -122,9 +132,17 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         String appointment_Date = date.getText().toString();
 
         if(appointment_Date.isEmpty()){
-            Toast.makeText(this, "Please enter your symptoms", duration).show();
+            Toast.makeText(this, "Please choose a date", duration).show();
             return;
         }
+
+        appointment appointment = new appointment(phone_num, symptom_description, doctor_Type, appointment_City, appointment_Date);
+        databaseReference.child("appointment "+phone_num).setValue(appointment)
+                .addOnSuccessListener(unused -> {
+                    Toast.makeText(this, "Appointment booked Successfully", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(e -> Toast.makeText(this, "Failed to Register: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+
 
         //save the info to next activity to display them
         Intent intent = new Intent(this, appointment_summary.class);
@@ -138,6 +156,20 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         startActivity(intent);
     }
 
+public static class appointment {
+    public String userPhone, symptom_description, doctor_Type, appointment_City, appointment_Date;
+
+    public appointment() {
+    }
+
+    public appointment(String userPhone,String symptom_description, String doctor_Type, String appointment_City, String appointment_Date) {
+        this.userPhone = userPhone;
+        this.symptom_description = symptom_description;
+        this.doctor_Type = doctor_Type;
+        this.appointment_City = appointment_City;
+        this.appointment_Date = appointment_Date;
+    }
+}
     public void back(View view){
         finish();
     }
