@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
@@ -23,7 +24,7 @@ public class SignIn extends AppCompatActivity {
     EditText firstName, lastName, email, phoneNumber, password;
     NumberPicker agePicker;
     RadioGroup genderGroup;
-    Button signUpButton;
+    Button signUpButton, backButton;
     DatabaseReference databaseReference;
 
     @Override
@@ -55,6 +56,7 @@ public class SignIn extends AppCompatActivity {
 
         signUpButton.setOnClickListener(v -> saveUserData());
     }
+
 
     private void saveUserData() {
         String fName = firstName.getText().toString();
@@ -102,5 +104,9 @@ public class SignIn extends AppCompatActivity {
             this.age = age;
             this.gender = gender;
         }
+    }
+
+    public void back(View view){
+        finish();
     }
 }
