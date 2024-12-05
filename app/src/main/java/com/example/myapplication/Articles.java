@@ -59,5 +59,9 @@ public class Articles extends AppCompatActivity {
         });
     }
 
+    public void Back(){
+        finish();
+    }
+
 
 }
