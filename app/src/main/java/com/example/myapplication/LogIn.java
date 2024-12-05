@@ -62,7 +62,7 @@ public class LogIn extends AppCompatActivity {
 
                     if (storedPassword != null && storedPassword.equals(enteredPassword)) {
                         Toast.makeText(LogIn.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        navigateToHomePage();
+                        navigateToHomePage(enteredPhone);
                     } else {
                         Toast.makeText(LogIn.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
                         navigateToMainActivity();
@@ -87,8 +87,12 @@ public class LogIn extends AppCompatActivity {
         finish();
     }
 
-    private void navigateToHomePage() {
+    private void navigateToHomePage(String phone) {
         Intent intent = new Intent(LogIn.this, HomePage.class);
+        Bundle phone_num_bundle = new Bundle();
+        phone_num_bundle.putString("phone", phone);
+        intent.putExtras(phone_num_bundle);
+
         startActivity(intent);
         finish();
     }
