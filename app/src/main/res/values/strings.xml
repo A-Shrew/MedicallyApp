@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">My Application</string>
-
+    <string-array name="atitles">
+        <item>Eating Dark Chocolate May Help Lower Your Risk of Type 2 Diabetes</item>
+        <item>How a Surprising Diagnosis from My Cardiologist Led to Open-Heart Surgery</item>
+        <item>Eating More Plant Than Animal Protein May Cut Your Heart Disease Risk</item>
+        <item>Ultra-processed Foods Drive Obesity, But a Mediterranean Diet May Help</item>
+        <item>Irregular Sleep-Wake Cycles May Raise Heart Attack, Stroke Risk by 26%</item>
+        <item>She Lived with These Parkinson’s Symptoms for Over a Decade Before Diagnosis</item>
+        <item>6 Natural Ozempic Alternatives That Can Help Quiet ‘Food Noise’</item>
+        <item>E. Coli Outbreak Linked to Carrots: Symptoms, Risks, and Recalled Brands</item>
+    </string-array>
+    <string-array name="alinks">
+        <item>https://www.healthline.com/health-news/dark-chocolate-may-lower-diabetes-risk</item>
+        <item>https://www.healthline.com/health-news/dave-mills-heart-surgery-experience</item>
+        <item>https://www.healthline.com/health-news/higher-ratio-plant-protein-lower-heart-disease-risk</item>
+        <item>https://www.healthline.com/health-news/ultra-processed-foods-obesity-metabolic-risks</item>
+        <item>https://www.healthline.com/health-news/irregular-sleep-wake-cycles-heart-attack-stroke-risk</item>
+        <item>https://www.healthline.com/health-news/early-parkinsons-symptoms-before-diagnosis</item>
+        <item>https://www.healthline.com/health-news/natural-ozempic-alternatives-quiet-food-noise</item>
+        <item>https://www.healthline.com/health-news/e-coli-outbreak-linked-carrots-symptoms-risks-recalled-brands</item>
+    </string-array>
     <string-array name="primary_care">
         <item>Pediatrician</item>
         <item>Internist</item>
@@ -44,5 +63,4 @@
         <item>Vancouver</item>
         <item>Vernon</item>
     </string-array>
-
 </resources>
