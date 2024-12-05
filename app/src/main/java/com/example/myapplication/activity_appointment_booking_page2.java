@@ -23,7 +23,7 @@ import java.lang.reflect.Array;
 public class activity_appointment_booking_page2 extends AppCompatActivity {
     Intent intent;
     Bundle bundle;
-    String symptom_description, doctype;
+    String symptom_description, doctype, phone_num;
     Spinner doctype2, city;
     EditText date;
     TextView docprompt;
@@ -41,6 +41,7 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         intent = getIntent();
         bundle = intent.getExtras();
 
+        phone_num = bundle.getString("phone");
         doctype = bundle.getString("doctype");
         symptom_description = bundle.getString("symptom_description");
 
