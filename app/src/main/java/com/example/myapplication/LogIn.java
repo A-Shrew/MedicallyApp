@@ -87,7 +87,7 @@ public class LogIn extends AppCompatActivity {
     }
 
     private void navigateToHomePage() {
-        Intent intent = new Intent(LogIn.this, HomePage.class);
+        Intent intent = new Intent(LogIn.this, Articles.class);
         startActivity(intent);
         finish();
     }
