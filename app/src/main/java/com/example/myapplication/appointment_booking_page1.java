@@ -56,4 +56,8 @@ public class appointment_booking_page1 extends AppCompatActivity {
         intent.putExtras(bundle);
         startActivity(intent);
     }
+
+    public void back(View view){
+        finish();
+    }
 }

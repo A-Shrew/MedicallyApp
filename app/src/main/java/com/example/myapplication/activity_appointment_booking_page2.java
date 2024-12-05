@@ -127,4 +127,8 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void back(View view){
+        finish();
+    }
+
 }

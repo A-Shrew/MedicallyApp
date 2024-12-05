@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class appointment_summary extends AppCompatActivity {
+    String doctor, date, location;
+    TextView doctor_text, date_text, location_text;
+
+    Intent intent;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,19 @@ public class appointment_summary extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        intent = getIntent();
+        bundle = intent.getExtras();
+
+        doctor = bundle.getString("doctor_Type");
+        date = bundle.getString("appointment_Date");
+        location = bundle.getString("appointment_City");
+
+        doctor_text = findViewById(R.id.doc);
+        date_text = findViewById(R.id.date);
+        location_text = findViewById(R.id.location);
+
+        doctor_text.setText(doctor);
+        date_text.setText(date);
+        location_text.setText(location);
     }
 }
