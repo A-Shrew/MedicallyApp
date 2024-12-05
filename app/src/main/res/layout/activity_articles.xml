@@ -17,4 +17,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/medical_background" />
 
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:background="#B3DEF2"
+        android:divider="7FABC0FF"
+        android:dividerHeight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
