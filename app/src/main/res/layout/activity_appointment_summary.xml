@@ -20,6 +20,20 @@
         app:layout_constraintVertical_bias="0.521"
         app:srcCompat="@drawable/medical_background" />
 
+    <Button
+        android:id="@+id/mainhome"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#067D84"
+        android:onClick="back"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.787" />
+
     <TextView
         android:id="@+id/textView19"
         android:layout_width="138dp"
@@ -41,7 +55,7 @@
         android:layout_height="51dp"
         android:fontFamily="sans-serif-medium"
         android:text="(location) "
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +70,7 @@
         android:layout_height="51dp"
         android:fontFamily="sans-serif-medium"
         android:text="(date) "
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +85,7 @@
         android:layout_height="51dp"
         android:fontFamily="sans-serif-medium"
         android:text="(doc) "
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

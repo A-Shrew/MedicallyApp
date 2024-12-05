@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -114,10 +115,15 @@ public class activity_appointment_booking_page2 extends AppCompatActivity {
     public void book(View view){
         /* Need to save them to database
          */
+        int duration = Toast.LENGTH_SHORT;
         String doctor_Type = doctype2.getSelectedItem().toString();
         String appointment_City = city.getSelectedItem().toString();
         String appointment_Date = date.getText().toString();
 
+        if(appointment_Date.isEmpty()){
+            Toast.makeText(this, "Please enter your symptoms", duration).show();
+            return;
+        }
 
         //save the info to next activity to display them
         Intent intent = new Intent(this, appointment_summary.class);

@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -41,5 +42,11 @@ public class appointment_summary extends AppCompatActivity {
         doctor_text.setText(doctor);
         date_text.setText(date);
         location_text.setText(location);
+    }
+
+    public void back(View view){
+        Intent intent = new Intent(this, HomePage.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
     }
 }
