@@ -20,4 +20,47 @@
         <item>https://www.healthline.com/health-news/natural-ozempic-alternatives-quiet-food-noise</item>
         <item>https://www.healthline.com/health-news/e-coli-outbreak-linked-carrots-symptoms-risks-recalled-brands</item>
     </string-array>
+    <string-array name="primary_care">
+        <item>Pediatrician</item>
+        <item>Internist</item>
+        <item>Nurse practitioner</item>
+        <item>Physician assistant</item>
+    </string-array>
+
+    <string-array name="specialist">
+        <item>Cardiologist</item>
+        <item>Dermatologist</item>
+        <item>Gastroenterologist</item>
+        <item>Oncologist</item>
+    </string-array>
+
+    <string-array name="womens">
+        <item>Gynecologist</item>
+        <item>Urologist</item>
+    </string-array>
+
+    <string-array name="mental">
+        <item>Psychiatrist</item>
+        <item>Psychologists</item>
+        <item>Psychotherapist</item>
+    </string-array>
+
+    <string-array name="other">
+        <item>Oncologist</item>
+        <item>Radiologist</item>
+        <item>Pulmonologist</item>
+        <item>Immunology</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>Abbotsford</item>
+        <item>Burnaby</item>
+        <item>Coquitlam</item>
+        <item>Kelowna</item>
+        <item>Langley</item>
+        <item>Penticton</item>
+        <item>Surrey</item>
+        <item>Vancouver</item>
+        <item>Vernon</item>
+    </string-array>
 </resources>

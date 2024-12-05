@@ -18,6 +18,15 @@
             android:name=".Articles"
             android:exported="false" />
         <activity
+            android:name=".appointment_summary"
+            android:exported="false" />
+        <activity
+            android:name=".activity_appointment_booking_page2"
+            android:exported="false" />
+        <activity
+            android:name=".appointment_booking_page1"
+            android:exported="false" />
+        <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
