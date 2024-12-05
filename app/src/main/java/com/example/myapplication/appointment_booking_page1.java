@@ -39,13 +39,14 @@ public class appointment_booking_page1 extends AppCompatActivity {
         int docnum = doctortype.getCheckedRadioButtonId();
         String symptom_description = desc.getText().toString();
 
-        if (docnum == -1) {
-            Toast.makeText(this, "Please select a type of doctor", duration).show();
-            return;
-        }
 
         if (symptom_description.isEmpty()){
             Toast.makeText(this, "Please enter your symptoms", duration).show();
+            return;
+        }
+
+        if (docnum == -1) {
+            Toast.makeText(this, "Please select a type of doctor", duration).show();
             return;
         }
 

@@ -30,7 +30,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void read_article(View view){
-        //Intent intent = new Intent(this, TODO);
-        //startActivity(intent);
+        Intent intent = new Intent(this, Articles.class);
+        startActivity(intent);
     }
 }
