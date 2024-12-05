@@ -86,7 +86,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_marginStart="190dp"
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
