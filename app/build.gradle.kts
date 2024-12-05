@@ -38,7 +38,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database:20.2.3")
-
+    implementation("com.github.kwabenberko:news-api-java:1.0.2")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
