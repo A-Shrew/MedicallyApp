@@ -26,6 +26,7 @@
         android:layout_height="36dp"
         android:fontFamily="sans-serif-black"
         android:text="Symptoms:"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +41,7 @@
         android:layout_height="36dp"
         android:fontFamily="sans-serif-black"
         android:text="Type of Doctor required:"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +57,7 @@
         android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-black"
         android:text="Medically-Book an Appointment"
+        android:textColor="#000000"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +73,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="Describe Syptoms"
+        android:textColor="#000000"
         android:inputType="textMultiLine"
         android:scrollHorizontally="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -84,9 +88,10 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#067D84"
         android:onClick="gotopage2"
         android:text="Next"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.783"
@@ -98,9 +103,10 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#067D84"
         android:onClick="back"
         android:text="Back"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.312"
@@ -126,8 +132,8 @@
             android:layout_gravity="start"
             android:layoutDirection="rtl"
             android:text="- Primary care providers"
+            android:textColor="#000000"
             android:textAlignment="textStart"
-            android:textColor="#49454F"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -139,7 +145,7 @@
             android:layoutDirection="rtl"
             android:text="- Specialists"
             android:textAlignment="textStart"
-            android:textColor="#49454F"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -151,7 +157,7 @@
             android:layoutDirection="rtl"
             android:text="- Women's and Reproductive Health"
             android:textAlignment="textStart"
-            android:textColor="#49454F"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -163,7 +169,7 @@
             android:layoutDirection="rtl"
             android:text="- Mental health"
             android:textAlignment="textStart"
-            android:textColor="#49454F"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -175,7 +181,7 @@
             android:layoutDirection="rtl"
             android:text="- Other Specialists"
             android:textAlignment="textStart"
-            android:textColor="#49454F"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RadioGroup>
