@@ -38,7 +38,6 @@ public class ReadReview extends AppCompatActivity {
     List<String> reviewsList;
     int counter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,12 +59,13 @@ public class ReadReview extends AppCompatActivity {
         home = findViewById(R.id.returnhome);
         counter = 0;
 
-
         doctorsList = new ArrayList<>();
         reviewsList = new ArrayList<>();
+        readReviewFromDatabase();
 
         if(doctorName !=null && !doctorName.isEmpty())
             docname.setText(doctorName);
+
     }
 
     public void nextReview(View v){
@@ -86,10 +86,10 @@ public class ReadReview extends AppCompatActivity {
         }
     }
 
-    public void returnHome(View v){
+    public void back(View view){
         Intent intent = new Intent(this, HomePage.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
-        finish();
     }
 
     public void readReviewFromDatabase(){
@@ -105,14 +105,12 @@ public class ReadReview extends AppCompatActivity {
             else
             {
                 DataSnapshot receivedValue = task.getResult();
-                for(DataSnapshot node: receivedValue.getChildren())
-                {
-                    String docName = node.getKey();
-                    DataSnapshot reviewsNode = node.child("Reviews");
-                    for (DataSnapshot reviews : reviewsNode.getChildren()) {
-                        doctorsList.add(reviews.getKey());
-                        reviewsList.add(reviews.child("Review").getValue(String.class));
-                    }
+                DataSnapshot doctorNode = receivedValue.child("Doctors");
+                DataSnapshot name = doctorNode.child(doctorName);
+                DataSnapshot reviews = name.child("Reviews");
+                for(DataSnapshot node: reviews.getChildren()) {
+                    doctorsList.add(doctorName);
+                    reviewsList.add(node.getValue(String.class));
                 }
             }
         }

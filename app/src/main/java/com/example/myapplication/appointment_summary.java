@@ -40,7 +40,7 @@ public class appointment_summary extends AppCompatActivity {
         doctor_text = findViewById(R.id.doc);
         date_text = findViewById(R.id.date);
         location_text = findViewById(R.id.location);
-        reviewbutton = findViewById(R.id.toReview);
+        reviewbutton = findViewById(R.id.toreview);
 
         doctor_text.setText(doctor);
         date_text.setText(date);
@@ -52,7 +52,7 @@ public class appointment_summary extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
-    public void onReview(View v){
+    public void onreview(View v){
         Intent intent2 = new Intent(this, DoctorReviews.class);
         startActivity(intent2);
         finish();

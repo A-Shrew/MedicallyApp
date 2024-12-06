@@ -20,6 +20,20 @@
         app:layout_constraintVertical_bias="0.521"
         app:srcCompat="@drawable/medical_background" />
 
+    <Button
+        android:id="@+id/home3"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#067D84"
+        android:onClick="back"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894" />
+
     <TextView
         android:id="@+id/docprompt5"
         android:layout_width="325dp"
