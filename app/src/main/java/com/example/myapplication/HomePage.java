@@ -43,4 +43,13 @@ public class HomePage extends AppCompatActivity {
         Intent intent = new Intent(this, Articles.class);
         startActivity(intent);
     }
+
+    public void upcomingApps(View view){
+        Intent intent = new Intent(HomePage.this, appointmentPage.class);
+        Bundle phoneBundle = new Bundle();
+        phoneBundle.putString("phone", phone_num);
+        intent.putExtras(phoneBundle);
+        startActivity(intent);
+    }
+
 }
