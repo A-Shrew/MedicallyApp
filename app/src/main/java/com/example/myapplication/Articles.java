@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -24,8 +25,8 @@ import java.util.List;
 public class Articles extends AppCompatActivity {
 
     ArrayAdapter<CharSequence> adapter;
+    SearchView sv;
     ListView lv;
-    List<String> articleTitles = new ArrayList<>();
     List<String> articleUrls = new ArrayList<>();
 
 
@@ -39,16 +40,28 @@ public class Articles extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        sv = findViewById(R.id.search);
         lv  = findViewById(R.id.list);
         adapter = ArrayAdapter.createFromResource(this, R.array.atitles, android.R.layout.simple_list_item_1);;
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
         lv.setAdapter(adapter);
-
-
-
         articleUrls = Arrays.asList(getResources().getStringArray(R.array.alinks));
 
-        //Displays toast when an item in the list is clicked
+        // Move articles similar to search query to the top of the list view
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
+        // Displays toast when an item in the list is clicked
         lv.setOnItemClickListener((p, v, position, id) -> {
             String url = articleUrls.get(position);
             if (url != null) {
@@ -59,10 +72,7 @@ public class Articles extends AppCompatActivity {
             }
         });
     }
-
     public void Back(View view){
         finish();
     }
-
-
 }

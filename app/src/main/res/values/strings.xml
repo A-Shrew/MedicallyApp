@@ -9,6 +9,10 @@
         <item>She Lived with These Parkinson’s Symptoms for Over a Decade Before Diagnosis</item>
         <item>6 Natural Ozempic Alternatives That Can Help Quiet ‘Food Noise’</item>
         <item>E. Coli Outbreak Linked to Carrots: Symptoms, Risks, and Recalled Brands</item>
+        <item>Carbs or fats for breakfast? Which is best for healthy weight in men vs women?</item>
+        <item>Which cardiovascular drugs may help lower dementia risk?</item>
+        <item>Common thyroid drug levothyroxine linked to bone mass loss</item>
+        <item>Managing chronic inflammation with psoriasis</item>
     </string-array>
     <string-array name="alinks">
         <item>https://www.healthline.com/health-news/dark-chocolate-may-lower-diabetes-risk</item>
@@ -19,6 +23,10 @@
         <item>https://www.healthline.com/health-news/early-parkinsons-symptoms-before-diagnosis</item>
         <item>https://www.healthline.com/health-news/natural-ozempic-alternatives-quiet-food-noise</item>
         <item>https://www.healthline.com/health-news/e-coli-outbreak-linked-carrots-symptoms-risks-recalled-brands</item>
+        <item>https://www.medicalnewstoday.com/articles/carbs-or-fats-for-breakfast-which-is-best-for-healthy-weight-in-men-vs-women</item>
+        <item>https://www.medicalnewstoday.com/articles/which-cardiovascular-drugs-may-help-lower-dementia-risk</item>
+        <item>https://www.medicalnewstoday.com/articles/common-thyroid-drug-levothyroxine-linked-to-bone-mass-loss</item>
+        <item>https://www.medicalnewstoday.com/articles/psoriasis-and-chronic-inflammation</item>
     </string-array>
 
     <string-array name="primary_care">

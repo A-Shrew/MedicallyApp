@@ -30,25 +30,10 @@
         app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
-
-    <Button
-        android:id="@+id/toreview"
-        android:layout_width="104dp"
-        android:layout_height="59dp"
-        android:textColor="#FFFFFFFF"
-        app:backgroundTint="#462255"
-        android:onClick="onreview"
-        android:text="Doctor Reviews"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.739"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.793" />
 
     <TextView
         android:id="@+id/textView19"

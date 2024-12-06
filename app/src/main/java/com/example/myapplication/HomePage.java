@@ -52,4 +52,9 @@ public class HomePage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void read_reviews(View view){
+        Intent intent = new Intent(HomePage.this, DoctorReviews.class);
+        startActivity(intent);
+    }
+
 }

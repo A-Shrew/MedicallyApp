@@ -18,7 +18,6 @@ public class appointment_summary extends AppCompatActivity {
 
     Intent intent;
     Bundle bundle;
-    Button reviewbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,6 @@ public class appointment_summary extends AppCompatActivity {
         doctor_text = findViewById(R.id.doc);
         date_text = findViewById(R.id.date);
         location_text = findViewById(R.id.location);
-        reviewbutton = findViewById(R.id.toreview);
 
         doctor_text.setText(doctor);
         date_text.setText(date);
@@ -51,10 +49,5 @@ public class appointment_summary extends AppCompatActivity {
         Intent intent = new Intent(this, HomePage.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
-    }
-    public void onreview(View v){
-        Intent intent2 = new Intent(this, DoctorReviews.class);
-        startActivity(intent2);
-        finish();
     }
 }

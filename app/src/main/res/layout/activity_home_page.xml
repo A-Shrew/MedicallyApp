@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="view_upcomingAppointments"
-    tools:context=".HomePage">
+    tools:context=".HomePage"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-63dp">
 
     <ImageView
         android:id="@+id/imageView8"
@@ -39,22 +41,9 @@
         android:id="@+id/appointment_button"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginBottom="472dp"
         android:onClick="start_booking"
         android:text="Book Appointment"
-        android:textColor="#FFFFFFFF"
-        app:backgroundTint="#462255"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/appointment_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_marginBottom="320dp"
-        android:onClick="read_article"
-        android:text="Read Medical Articles"
         android:textColor="#FFFFFFFF"
         app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,9 +54,36 @@
         android:id="@+id/upcomingAppointmentButton"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="368dp"
         android:onClick="upcomingApps"
         android:text="Upcoming appointments"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/appointment_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="152dp"
+        android:onClick="read_reviews"
+        android:text="Read Doctor Reviews"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/appointment_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="260dp"
+        android:onClick="read_article"
+        android:text="Read Medical Articles"
         android:textColor="#FFFFFFFF"
         app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
