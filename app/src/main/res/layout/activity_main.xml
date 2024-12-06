@@ -26,6 +26,7 @@
         android:text="Medically"
         android:fontFamily="sans-serif-black"
         android:textSize="40sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,8 +35,10 @@
         android:id="@+id/button"
         android:layout_width="118dp"
         android:layout_height="63dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="260dp"
         android:text="Log In"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,8 +47,10 @@
         android:id="@+id/button2"
         android:layout_width="118dp"
         android:layout_height="63dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="370dp"
         android:text="Sign Up"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
