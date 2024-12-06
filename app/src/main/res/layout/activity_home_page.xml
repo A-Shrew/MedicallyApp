@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="view_upcomingAppointments"
     tools:context=".HomePage">
 
     <ImageView
@@ -38,28 +39,39 @@
         android:id="@+id/appointment_button"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
+        android:layout_marginBottom="420dp"
         android:onClick="start_booking"
         android:text="Book Appointment"
         android:textColor="#FFFFFFFF"
         app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/appointment_button2"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
+        android:layout_marginBottom="320dp"
         android:onClick="read_article"
         android:text="Read Medical Articles"
         android:textColor="#FFFFFFFF"
         app:backgroundTint="#462255"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/upcomingAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="220dp"
+        android:onClick="upcomingApps"
+        android:text="Upcoming appointments"
+        android:textColor="#FFFFFFFF"
+        app:backgroundTint="#462255"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
