@@ -64,4 +64,13 @@
         <item>Vancouver</item>
         <item>Vernon</item>
     </string-array>
+
+    <string-array name="doctors">
+        <item>Arnold Smith</item>
+        <item>Tracey Curtis</item>
+        <item>Simon Pryce</item>
+        <item>Connor Curzon</item>
+        <item>Hannah Mars</item>
+        <item>Michael Hennessey</item>
+    </string-array>
 </resources>

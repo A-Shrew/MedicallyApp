@@ -3,6 +3,8 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -14,10 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DoctorReviews extends AppCompatActivity {
 
-    Button write, read;
+    Button write, read, home;
     Spinner doctor;
     String docname;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +29,14 @@ public class DoctorReviews extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        write = findViewById(R.id.wreview);
+        read = findViewById(R.id.rreview);
+        doctor = findViewById(R.id.doctor);
+        home = findViewById(R.id.home3);
 
-        write.findViewById(R.id.wreview);
-        read.findViewById(R.id.rreview);
-        doctor.findViewById(R.id.doctor);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.doctors, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        doctor.setAdapter(adapter);
     }
 
     public void readReview(View v) {
@@ -55,4 +60,9 @@ public class DoctorReviews extends AppCompatActivity {
         finish();
     }
 
+    public void back(View view){
+        Intent intent = new Intent(this, HomePage.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+    }
 }
